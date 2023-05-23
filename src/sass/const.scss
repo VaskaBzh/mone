@@ -1,13 +1,15 @@
 $white: #fff;
 $black: #000;
 
-$redMain: #e60000;
-$red:	#fb0000;
-$red2: 	#fe0b18;
-$red3: #A54E5F;
-$redLight: #fe4d58;
+$darkBlue: #2E3B66;
 
-$grayLight: #feeff2;
-$gray:   #BFB6B8;
+$gold: #A2652C;
+$darkGold: #DFB845;
+
+$goldGradient: linear-gradient(180deg, #FFF4D2 0%, #FAD361 100%);
+
+$textShadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+$boxShadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 
 $transition: 0.3s;

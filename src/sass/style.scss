@@ -2,6 +2,43 @@
 @import "mixins";
 @import "fonts";
 
+@import "node_modules/swiper/swiper";
+
 @import "templates/wrapper";
+@import "templates/button";
+@import "templates/title";
+@import "templates/text";
+@import "templates/input";
+@import "templates/form";
+@import "templates/logo";
+@import "templates/nav";
+@import "templates/contacts";
+@import "templates/address";
+@import "templates/recall";
+
+@import "templates/hero";
+@import "templates/presentation";
+
 @import "templates/header";
 @import "templates/footer";
+
+// Общие стили
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: SourceSerifPro, serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+body {
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+}
