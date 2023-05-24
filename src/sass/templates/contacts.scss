@@ -1,0 +1,24 @@
+.contacts {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  .phone {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: $black;
+    text-decoration: none;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &_link,
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}

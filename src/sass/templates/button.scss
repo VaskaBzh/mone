@@ -1,0 +1,31 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 20px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
+  color: $black;
+  min-height: 80px;
+  border: 1px solid $goldGradient;
+  cursor: pointer;
+  &-gold {
+    background: $goldGradient;
+    border: 0;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      background: $darkGold;
+      height: 100%;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 12px);
+      z-index: -1;
+      border-radius: 20px;
+    }
+  }
+}

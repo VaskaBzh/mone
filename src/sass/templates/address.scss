@@ -1,0 +1,29 @@
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &_subtitle {
+    margin-bottom: 4px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  &_corpus {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+  }
+  &_text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: $darkBlue;
+  }
+}
