@@ -1,0 +1,49 @@
+.questions {
+  padding: 66px 0 41px;
+  margin: 51px 0 0;
+  background: $gray;
+  .wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    &:first-child {
+      .title {
+        margin-bottom: 13px;
+      }
+    }
+    .text {
+      font-weight: 400;
+    }
+    .address {
+      margin-top: 11px;
+      &_subtitle {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 38px;
+        color: $black;
+        margin-bottom: 0;
+      }
+    }
+    .recall__block {
+      margin-top: 50px;
+      max-width: 368px;
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
+      align-items: flex-start;
+    }
+    #map {
+      max-width: 678px;
+      width: 100%;
+      min-height: 443px;
+      margin-top: 32px;
+    }
+  }
+}

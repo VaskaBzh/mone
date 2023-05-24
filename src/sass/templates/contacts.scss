@@ -16,9 +16,18 @@
       height: 20px;
     }
   }
-  &_link,
   svg {
     width: 30px;
     height: 30px;
+  }
+  &_link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: $black;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
   }
 }

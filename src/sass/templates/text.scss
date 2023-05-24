@@ -3,4 +3,26 @@
   font-size: 30px;
   line-height: 38px;
   color: $black;
+  b {
+    font-weight: 700;
+    color: $black;
+  }
+  &-md {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  &-sm {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  &-xs {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &-darkblue {
+    color: $darkBlue;
+  }
 }

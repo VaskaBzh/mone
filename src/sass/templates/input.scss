@@ -1,4 +1,19 @@
 .input {
   border: none;
   outline: none;
+  background: transparent;
+  &-gold {
+    border-bottom: 1px solid $white;
+    padding: 0 10px;
+    height: calc(25px + 6px + 6px);
+    display: inline-flex;
+    align-items: center;
+    color: $yellowLight;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    &::placeholder {
+      color: $yellowLight;
+    }
+  }
 }

@@ -3,5 +3,11 @@
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
+  &__head {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 

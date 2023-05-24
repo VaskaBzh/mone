@@ -1,0 +1,25 @@
+.garant {
+  padding: 42px 0 66px;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  &__wrap {
+    display: flex;
+    gap: 42px;
+    img {
+      max-width: 687px;
+      width: 100%;
+      height: 340px;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .button {
+    min-height: 50px;
+  }
+}

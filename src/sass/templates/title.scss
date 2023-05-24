@@ -1,18 +1,30 @@
 .title {
   color: $black;
+  font-weight: 300;
+  text-shadow: $textShadow;
+  text-align: center;
   &-h1 {
     font-weight: 400;
     font-size: 32px;
     line-height: 40px;
-    color: $gold;
-    text-shadow: $textShadow;
     display: flex;
     flex-direction: column;
+    text-align: left;
     span {
       font-weight: 300;
       font-size: 60px;
       line-height: 75px;
       margin-bottom: -14px;
     }
+  }
+  &-h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  &-gold {
+    color: $gold;
+  }
+  &-white {
+    color: $white;
   }
 }

@@ -1,0 +1,13 @@
+.subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: $darkBlue;
+  text-align: center;
+  b {
+    font-weight: 700;
+  }
+  &-gold {
+    color: $yellowLight;
+  }
+}

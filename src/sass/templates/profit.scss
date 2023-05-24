@@ -1,0 +1,47 @@
+.profit {
+  padding: 60px 0 43px;
+  &__wrap {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  &__column {
+    max-width: 415px;
+    width: 100%;
+    .text {
+      margin-bottom: 29px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &_subtitle {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: $black;
+  }
+  &_val {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 29px;
+    color: $darkBlue;
+    text-shadow: $textShadow;
+    &-gold {
+      padding: 5px 15px;
+      background: rgba(255, 215, 100, 0.5);
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 40px;
+      color: $black;
+      width: fit-content;
+    }
+  }
+}

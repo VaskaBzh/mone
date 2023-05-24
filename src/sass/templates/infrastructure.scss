@@ -1,0 +1,60 @@
+.infrastructure {
+  padding: 39px 0 45px;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .swiper {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    width: 100%;
+    &-wrapper {
+      max-width: 728px;
+      height: 400px;
+      width: 100%;
+      position: relative;
+    }
+    &-pagination {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px 20px;
+      position: relative;
+      width: 100%;
+      &-bullet {
+        background: $gray;
+        border-radius: 5px;
+        height: 40px;
+        padding: 10px 20px;
+        white-space: nowrap;
+        &-active {
+          background: $yellow;
+        }
+      }
+    }
+  }
+  &_pdf {
+    max-width: calc(748px - 38px);
+    width: fit-content;
+    margin: 34px 125px 0 auto;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    .pdf {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      text-decoration-line: underline;
+      color: $darkBlue;
+      svg {
+        width: 32px;
+        height: 37px;
+      }
+    }
+  }
+}
