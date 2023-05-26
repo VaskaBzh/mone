@@ -6,11 +6,18 @@
     display: flex;
     gap: 40px;
     justify-content: space-between;
+    @include sm {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
   &__block {
     display: flex;
     flex-direction: column;
     gap: 13px;
+    @include sm {
+      align-items: center;
+    }
     &:first-child {
       .title {
         margin-bottom: 13px;
@@ -32,6 +39,12 @@
     .recall__block {
       margin-top: 50px;
       max-width: 368px;
+      @include sm {
+        align-items: center;
+        .button {
+          width: 100%;
+        }
+      }
     }
     .contacts {
       display: flex;
@@ -44,6 +57,11 @@
       width: 100%;
       min-height: 443px;
       margin-top: 32px;
+      margin-bottom: 0;
+      @include sm {
+        max-width: 100%;
+        min-height: 550px;
+      }
     }
   }
 }

@@ -2,6 +2,9 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  @include lg {
+    display: none;
+  }
   .phone {
     display: inline-flex;
     gap: 10px;

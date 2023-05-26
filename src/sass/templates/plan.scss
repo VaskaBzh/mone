@@ -10,6 +10,10 @@
     display: flex;
     justify-content: space-between;
     gap: 60px;
+    @include md {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
   &__block {
     max-width: 350px;
@@ -17,17 +21,26 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @include md {
+      max-width: 100%;
+    }
     .text {
       margin: 15px 0;
     }
     img {
       height: 270px;
       width: 100%;
+      @include md {
+        height: auto;
+      }
     }
     .swiper {
       width: 100%;
       height: 270px;
       position: relative;
+      @include md {
+        height: auto;
+      }
       &-wrapper {
         width: 100%;
         height: 100%;

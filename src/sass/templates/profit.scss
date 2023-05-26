@@ -4,13 +4,25 @@
     display: flex;
     width: 100%;
     align-items: center;
+    @include md {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
   &__column {
     max-width: 415px;
     width: 100%;
+    @include md {
+      max-width: 100%;
+    }
     .text {
       margin-bottom: 29px;
     }
+  }
+  @include md {
+      img {
+        order: -1;
+      }
   }
   &__info {
     display: flex;

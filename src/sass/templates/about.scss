@@ -4,11 +4,21 @@
   background-size: 30% 35%;
   background-position: 75% 15%;
   background-repeat: no-repeat;
+  @include md {
+    background-size: 50% 55%;
+    background-position: 66% -2%;
+  }
   .wrapper {
     display: flex;
     gap: 70px;
     justify-content: space-between;
     align-items: center;
+    @include md {
+      flex-direction: column;
+    }
+    &__head {
+      align-items: flex-start;
+    }
   }
   &__images {
     width: 100%;
@@ -100,6 +110,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include md {
+      order: -1;
+      max-width: 100%;
+    }
     .title {
       text-align: left;
     }

@@ -10,6 +10,10 @@
     display: flex;
     gap: 40px;
     justify-content: space-between;
+    @include md {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
   &__block {
     display: flex;

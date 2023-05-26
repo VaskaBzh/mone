@@ -22,6 +22,7 @@ export function popups() {
         button.addEventListener("click", (e) => {
             e.preventDefault()
             popups.forEach(el => {
+                console.log(el);
                 if ("#" + el.attributes[1].nodeValue === button.dataset.popup) {
                     openPopup(el)
                 }
