@@ -5,15 +5,5 @@
     gap: 22px;
     width: fit-content;
     margin-top: 26px;
-    input {
-      height: calc(33px + 6px * 2);
-      padding: 0 9px;
-      font-size: 26px;
-      line-height: 33px;
-      color: $black;
-      border-bottom: 1px solid $black;
-      display: inline-flex;
-      align-items: center;
-    }
   }
 }

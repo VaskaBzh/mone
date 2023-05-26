@@ -344,6 +344,11 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   font-size: 40px;
   line-height: 50px;
 }
+.title-h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+}
 .title-gold {
   color: #A2652C;
 }
@@ -394,10 +399,150 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   color: #2E3B66;
 }
 
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease 0.3s;
+}
+.popup.open {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+.popup.open .popup__content {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.3s ease 0.3s, transform 0.6s ease 0.3s;
+}
+.popup__wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.popup__content {
+  cursor: default;
+  max-width: 1000px;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 10px;
+  width: fit-content;
+  display: flex;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.3s ease 0s, transform 0.6s ease 0s;
+  overflow: hidden;
+}
+.popup__block {
+  width: 500px;
+  height: 739px;
+  padding: 40px 50px 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+.popup__block-image {
+  padding: 0;
+}
+.popup__block-image img {
+  width: 100%;
+}
+.popup__block-image-full {
+  gap: 10px;
+  max-width: 1000px;
+  width: 100%;
+  padding: 26px 41px 100px;
+}
+.popup__block-image-full img,
+.popup__block-image-full video {
+  max-width: 918px;
+  width: 100%;
+}
+.popup__block-image-full .text {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33px;
+}
+.popup__block .message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.popup__block .message span {
+  color: #000;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33px;
+}
+.popup__block .message button {
+  min-width: 100%;
+}
+.popup__block .subtitle {
+  color: #000;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 6px;
+  text-align: left;
+}
+.popup__block .list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: decimal;
+}
+.popup__block .list_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000;
+}
+.popup__block .list_mark {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  color: #A2652C;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.popup__block .form {
+  align-items: center;
+  max-width: 368px;
+  gap: 20px;
+}
+.popup__block .form button {
+  min-width: 100%;
+  margin-top: 16px;
+}
+.popup__block .form_row {
+  margin-bottom: 4px;
+}
+
 .input {
   border: none;
   outline: none;
   background: transparent;
+  height: 45px;
+  padding: 0 9px;
+  font-size: 26px;
+  line-height: 33px;
+  color: #000;
+  border-bottom: 1px solid #000;
+  display: inline-flex;
+  align-items: center;
 }
 .input-gold {
   border-bottom: 1px solid #fff;
@@ -412,6 +557,46 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 }
 .input-gold::placeholder {
   color: #FFEBCC;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] + label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  position: relative;
+  cursor: pointer;
+}
+input[type=checkbox] + label:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  transition: all 0.2s ease 0s;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FAD361;
+  visibility: hidden;
+  opacity: 0;
+  left: 4px;
+}
+input[type=checkbox] + label:before {
+  content: "";
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #828282;
+}
+input[type=checkbox]:checked + label:after {
+  visibility: visible;
+  opacity: 1;
 }
 
 .form {
@@ -554,15 +739,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   width: fit-content;
   margin-top: 26px;
 }
-.recall__block input {
-  height: 45px;
-  padding: 0 9px;
-  font-size: 26px;
-  line-height: 33px;
-  color: #000;
-  border-bottom: 1px solid #000;
-  display: inline-flex;
-  align-items: center;
+
+.hidden {
+  display: none;
 }
 
 .hero .wrapper {
@@ -622,7 +801,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 }
 .hero .image_block .play_button {
   position: absolute;
-  cursor: pointer;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -635,6 +813,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   background: linear-gradient(180deg, #FFE69C 0%, #FBD973 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 3;
+  cursor: pointer;
 }
 .hero .image_block .play_button svg {
   width: 16px;
@@ -735,14 +914,16 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   flex-direction: column;
   gap: 40px;
 }
-.infrastructure .swiper {
-  display: flex;
-  gap: 50px;
-  justify-content: space-between;
+.infrastructure__wrap {
   width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.infrastructure .swiper {
+  max-width: 728px;
 }
 .infrastructure .swiper-wrapper {
-  max-width: 728px;
   height: 400px;
   width: 100%;
   position: relative;
@@ -750,16 +931,20 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 .infrastructure .swiper-pagination {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px 20px;
+  gap: 20px;
   position: relative;
   width: 100%;
+  height: fit-content;
 }
 .infrastructure .swiper-pagination-bullet {
   background: #F4F5F7;
   border-radius: 5px;
   height: 40px;
-  padding: 10px 20px;
+  padding: 5px 20px;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .infrastructure .swiper-pagination-bullet-active {
   background: #FAD361;

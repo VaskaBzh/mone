@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Главная</title>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=448805f6-ae5d-4c8f-b920-235192b601c9&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+    <script src="js/app.min.js" defer></script>
 </head>
     <body>
         <header class="header">
@@ -106,13 +110,13 @@
                             <span class="address_text">150 метров до моря</span>
                         </div>
                         <div class="recall__block">
-                            <input type="text" value="+ 7" class="input">
-                            <button class="button button-before button-gold">ЗАПИСАТЬСЯ НА ОНЛАЙН-ПОКАЗ</button>
+                            <input type="text" value="+ 7" placeholder="Ваш номер" class="input">
+                            <button class="button button-before button-gold" data-popup="#online">ЗАПИСАТЬСЯ НА ОНЛАЙН-ПОКАЗ</button>
                         </div>
                         <div class="image image_1">
                             <div class="image_block">
                                 <div class="button_gradient"></div>
-                                <div class="play_button">
+                                <div class="play_button" data-popup="#video">
                                     <svg width="17" height="27" viewBox="0 0 17 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_i_419_220)">
                                             <path d="M0 0L16.5949 13.3481L0 26.6962V0Z" fill="white"/>
@@ -138,7 +142,7 @@
                         <div class="image image_2">
                             <div class="image_block">
                                 <div class="button_gradient"></div>
-                                <div class="play_button">
+                                <div class="play_button" data-popup="#video">
                                     <svg width="17" height="27" viewBox="0 0 17 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_i_419_220)">
                                             <path d="M0 0L16.5949 13.3481L0 26.6962V0Z" fill="white"/>
@@ -164,7 +168,7 @@
                         <div class="image image_3">
                             <div class="image_block">
                                 <div class="button_gradient"></div>
-                                <div class="play_button">
+                                <div class="play_button" data-popup="#video">
                                     <svg width="17" height="27" viewBox="0 0 17 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_i_419_220)">
                                             <path d="M0 0L16.5949 13.3481L0 26.6962V0Z" fill="white"/>
@@ -262,6 +266,7 @@
                 </div>
             </section>
             <section class="infrastructure">
+                <div class="hidden">Парковка|Бассейн|Лаунж-зона</div>
                 <div class="wrapper">
                     <div class="wrapper__head">
                         <h2 class="title title-h2 title-gold">ИНФРАСТРУКТУРА КОМПЛЕКСА</h2>
@@ -272,23 +277,26 @@
                         </p>
                     </div>
 
-                    <div class="swiper">
+                    <div class="infrastructure__wrap">
                         <div class="swiper-pagination"></div>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="/img/structure_slide.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="/img/structure_slide.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="/img/structure_slide.png" alt="">
+
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/img/structure_slide.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/img/structure_slide.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/img/structure_slide.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="infrastructure_pdf">
-                        <a href="#" class="pdf">
+                        <a href="#" class="pdf" data-popup="#price">
                             <svg width="32" height="37" viewBox="0 0 32 37" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <rect width="32" height="37" fill="url(#pattern0)"/>
                                 <defs>
@@ -344,7 +352,7 @@
                     </div>
                 </div>
             </section>
-            <section class="map"></section>
+            <section class="map" id="map1"></section>
             <section class="plan">
                 <div class="wrapper">
                     <div class="wrapper__head">
@@ -393,7 +401,7 @@
                             <p class="text text-sm">
                                 Уютные апартаменты с большой двуспальной кроватью с балконами или с панорамным остеклением. Интерьер выполнен в современном стиле и светлых тонах.
                             </p>
-                            <button class="button button-gold">Узнать стоимость</button>
+                            <button class="button button-gold" data-popup="#price">Узнать стоимость</button>
                         </div>
                         <div class="plan__block">
                             <img src="/img/plan_img.png" alt="">
@@ -407,7 +415,7 @@
                             <p class="text text-sm">
                                 Уютные апартаменты с большой двуспальной кроватью с балконами или с панорамным остеклением. Интерьер выполнен в современном стиле и светлых тонах.
                             </p>
-                            <button class="button button-gold">Узнать стоимость</button>
+                            <button class="button button-gold" data-popup="#price">Узнать стоимость</button>
                         </div>
                         <div class="plan__block">
                             <img src="/img/plan_img.png" alt="">
@@ -420,7 +428,7 @@
                             <p class="text text-sm">
                                 Уютные апартаменты с большой двуспальной кроватью с балконами или с панорамным остеклением. Интерьер выполнен в современном стиле и светлых тонах.
                             </p>
-                            <button class="button button-gold">Узнать стоимость</button>
+                            <button class="button button-gold" data-popup="#price">Узнать стоимость</button>
                         </div>
                     </div>
                 </div>
@@ -530,7 +538,7 @@
                                     <input type="text" placeholder="Ваше имя" class="input input-gold">
                                     <input type="text" placeholder="Номер телефона" class="input input-gold">
                                 </div>
-                                <button class="button button-white">Получить полный инвест-расчет</button>
+                                <button class="button button-white" data-popup="#hyp">Получить полный инвест-расчет</button>
                                 <p class="form_message">Нажимая данную кнопку, вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a></p>
                             </form>
                         </div>
@@ -599,7 +607,7 @@
                         </div>
                         <div class="recall__block">
                             <input type="text" value="+ 7" class="input">
-                            <button class="button button-before button-gold">ПЕРЕЗВОНИТЬ МНЕ</button>
+                            <button data-popup="#feedback" class="button button-before button-gold">ПЕРЕЗВОНИТЬ МНЕ</button>
                         </div>
                         <div class="contacts">
                             <a href="#" class="contacts_link">
@@ -656,12 +664,160 @@
                     </div>
                     <div class="questions__block">
                         <h2 class="title title-h2 title-gold">Приезжайте к нам в офис продаж!</h2>
-                        <div id="map"></div>
+                        <div class="map" id="map"></div>
                     </div>
                 </div>
             </section>
         </main>
         <footer></footer>
-        <script src="js/app.min.js"></script>
+        <div class="popup" id="online">
+            <div class="popup__wrapper">
+                <div class="popup__content">
+                    <div class="popup__block popup__block-image">
+                        <img src="/img/popup_img_1.png" alt="">
+                    </div>
+                    <div class="popup__block">
+                        <h2 class="title title-h2 title-gold">
+                            ОНЛАЙН-ПОКАЗ
+                        </h2>
+                        <p class="subtitle">
+                            В режиме реального времени вы сможете:
+                        </p>
+                        <ul class="list">
+                            <li class="list_item">Увидеть территорию комплекса</li>
+                            <li class="list_item">Осмотреть интерьер аппартаментов</li>
+                            <li class="list_item">Оценить вид из окна</li>
+                            <li class="list_item">Узнать актуальные цены</li>
+                        </ul>
+                        <form class="form">
+                            <div class="form_row">
+                                <input required type="text" class="input" value="+ 7" placeholder="Ваш номер">
+                            </div>
+                            <div class="form_row">
+                                <input required type="text" class="input" placeholder="Ваше имя">
+                            </div>
+                            <button data-submit="#online_complete" class="button button-before button-gold">ОТПРАВИТЬ</button>
+                            <input required type="checkbox" name="check" id="check">
+                            <label for="check" class="checkbox">
+                                Я соглашаюсь на передачу личных данных
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="online_complete">
+            <div class="popup__wrapper">
+                <div class="popup__content">
+                    <div class="popup__block">
+                        <h2 class="title title-h2 title-gold">
+                            ОНЛАЙН-ПОКАЗ
+                        </h2>
+                        <p class="subtitle">
+                            В режиме реального времени вы сможете:
+                        </p>
+                        <ul class="list">
+                            <li class="list_item">Увидеть территорию комплекса</li>
+                            <li class="list_item">Осмотреть интерьер аппартаментов</li>
+                            <li class="list_item">Оценить вид из окна</li>
+                            <li class="list_item">Узнать актуальные цены</li>
+                        </ul>
+                        <div class="message">
+                            <span>УСПЕШНО!</span>
+                            <span>Ждите звонка от специалиста</span>
+                            <button data-close class="button button-before button-gold">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="video">
+            <div class="popup__wrapper">
+                <div class="popup__content">
+                    <div class="popup__block popup__block-image popup__block-image-full">
+                        <h3 class="title title-h3">Видео о комплексе “МОНЕ”</h3>
+                        <img src="/img/popup_img_2.png" alt="">
+                        <p class="text">Запишитесь на обратный звонок, чтобы получить больше информации!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="price">
+            <div class="popup__wrapper">
+                <div class="popup__content">
+                    <div class="popup__block popup__block-image">
+                        <img src="/img/popup_img_3.png" alt="">
+                    </div>
+                    <div class="popup__block">
+                        <h2 class="title title-h2 title-gold">
+                            УЗНАТЬ ЦЕНЫ
+                        </h2>
+                        <p class="subtitle">
+                            После звонка специалиста вы получите:
+                        </p>
+                        <ul class="list">
+                            <li class="list_item">Актуальные действующие предложения на все возможные варианты покупки</li>
+                            <li class="list_item">Фото и видео-материалы</li>
+                            <li class="list_item">Расчет доходности от сдачи в аренду</li>
+                        </ul>
+                        <form class="form">
+                            <div class="form_row">
+                                <input required type="text" class="input" value="+ 7" placeholder="Ваш номер">
+                            </div>
+                            <div class="form_row">
+                                <input required type="text" class="input" placeholder="Ваше имя">
+                            </div>
+                            <button data-submit="#price_complete" class="button button-before button-gold">ОТПРАВИТЬ</button>
+                            <input required type="checkbox" name="check1" id="check1">
+                            <label for="check1" class="checkbox">
+                                Я соглашаюсь на передачу личных данных
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="price_complete">
+            <div class="popup__wrapper">
+                <div class="popup__content">
+                    <div class="popup__block">
+                        <h2 class="title title-h2 title-gold">
+                            УЗНАТЬ ЦЕНЫ
+                        </h2>
+                        <p class="subtitle">
+                            После звонка специалиста вы получите:
+                        </p>
+                        <ul class="list">
+                            <li class="list_item">Актуальные действующие предложения на все возможные варианты покупки</li>
+                            <li class="list_item">Фото и видео-материалы</li>
+                            <li class="list_item">Расчет доходности от сдачи в аренду</li>
+                        </ul>
+                        <div class="message">
+                            <span>УСПЕШНО!</span>
+                            <span>Ждите звонка от специалиста</span>
+                            <button data-submit="#online_complete" class="button button-before button-gold">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="hyp">
+            <div class="popup__wrapper">
+                <div class="popup__content">
+                    <div class="popup__block">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="feedback">
+            <div class="popup__wrapper">
+                <div class="popup__content">
+                    <div class="popup__block">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

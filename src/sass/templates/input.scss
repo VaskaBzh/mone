@@ -2,6 +2,14 @@
   border: none;
   outline: none;
   background: transparent;
+  height: calc(33px + 6px * 2);
+  padding: 0 9px;
+  font-size: 26px;
+  line-height: 33px;
+  color: $black;
+  border-bottom: 1px solid $black;
+  display: inline-flex;
+  align-items: center;
   &-gold {
     border-bottom: 1px solid $white;
     padding: 0 10px;
