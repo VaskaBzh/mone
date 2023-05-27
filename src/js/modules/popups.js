@@ -5,11 +5,15 @@ export function popups() {
     const submitButton = document.querySelectorAll('[data-submit]')
     const closeButton = document.querySelectorAll('[data-close]')
 
+    const body = document.querySelector('body');
+
     const openPopup = (popup) => {
         popup.classList.add("open")
+        body.style.overflow = "hidden"
     }
     const closePopup = (popup) => {
         popup.classList.remove("open")
+        body.style.overflow = "visible"
     }
 
     const closeAllPopups = () => {

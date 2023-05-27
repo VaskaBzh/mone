@@ -25,14 +25,19 @@
         </div>
       </a>
       <nav class="nav">
-        <a href="" class="nav__link link">О комплексе</a>
-        <a href="" class="nav__link link">Комфорт</a>
-        <a href="" class="nav__link link">Локация</a>
-        <a href="" class="nav__link link">Планировки</a>
-        <a href="" class="nav__link link">Инвесторам</a>
-        <a href="" class="nav__link link">Застройщик</a>
-        <a href="" class="nav__link link">Контакты</a>
+        <a href="#hero_sec" class="nav__link link">О комплексе</a>
+        <a href="#infrastructure_sec" class="nav__link link">Комфорт</a>
+        <a href="#map1" class="nav__link link">Локация</a>
+        <a href="#plan_sec" class="nav__link link">Планировки</a>
+        <a href="#profit_sec" class="nav__link link">Инвесторам</a>
+        <a href="#about_sec" class="nav__link link">Застройщик</a>
+        <a href="#questions_sec" class="nav__link link">Контакты</a>
       </nav>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="contacts">
         <a href="tel: +79991150949" class="phone">
           <svg>
@@ -93,7 +98,7 @@
   </div>
 </header>
         <main>
-            <section class="hero">
+            <section class="hero" id="hero_sec">
                 <div class="wrapper">
                     <div class="hero__section">
                         <h1 class="title title-h1 title-gold">
@@ -194,7 +199,7 @@
                     </div>
                 </div>
             </section>
-            <section class="presentation">
+            <section class="presentation" id="presentation_sec">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -265,7 +270,7 @@
                     </div>
                 </div>
             </section>
-            <section class="infrastructure">
+            <section class="infrastructure" id="infrastructure_sec">
                 <div class="hidden">Парковка|Бассейн|Лаунж-зона</div>
                 <div class="wrapper">
                     <div class="wrapper__head">
@@ -314,7 +319,7 @@
                     </div>
                 </div>
             </section>
-            <section class="place">
+            <section class="place" id="place_sec">
                 <div class="wrapper">
                     <div class="wrapper__head">
                         <h2 class="title title-h2 title-gold">ИДЕАЛЬНОЕ РАСПОЛОЖЕНИЕ</h2>
@@ -353,7 +358,7 @@
                 </div>
             </section>
             <section class="map" id="map1"></section>
-            <section class="plan">
+            <section class="plan" id="plan_sec">
                 <div class="wrapper">
                     <div class="wrapper__head">
                         <h2 class="title title-h2 title-gold">ПЛАНИРОВКИ АППАРТАМЕНТОВ</h2>
@@ -433,7 +438,7 @@
                     </div>
                 </div>
             </section>
-            <section class="profit">
+            <section class="profit" id="profit_sec">
                 <div class="wrapper">
                     <div class="wrapper__head">
                         <h2 class="title title-h2 title-gold">ВЫГОДНОЕ ВЛОЖЕНИЕ!</h2>
@@ -469,7 +474,7 @@
                     </div>
                 </div>
             </section>
-            <section class="garant">
+            <section class="garant" id="garant_sec">
                 <div class="wrapper">
                     <div class="wrapper__head">
                         <img src="/img/garant_img.png" alt="">
@@ -489,7 +494,7 @@
                     </div>
                 </div>
             </section>
-            <section class="hyp">
+            <section class="hyp" id="hyp_sec">
                 <div class="wrapper">
                     <div class="wrapper__head">
                         <h2 class="title title-h2 title-white">
@@ -545,7 +550,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="about_sec">
                 <div class="wrapper">
                     <div class="about__images">
                         <img src="/img/about.png" alt="" class="about_img-main">
@@ -592,7 +597,7 @@
                     </div>
                 </div>
             </section>
-            <section class="questions">
+            <section class="questions" id="questions_sec">
                 <div class="wrapper">
                     <div class="questions__block">
                         <h2 class="title title-h2 title-gold">ОСТАЛИСЬ ВОПРОСЫ?</h2>
@@ -805,7 +810,22 @@
             <div class="popup__wrapper">
                 <div class="popup__content">
                     <div class="popup__block">
-
+                        <h2 class="title title-h2 title-gold">
+                            ИПОТЕЧНЫЙ РАСЧЕТ
+                        </h2>
+                        <p class="subtitle">
+                            Со специалистом вы сможете:
+                        </p>
+                        <ul class="list">
+                            <li class="list_item">Сделать точный расчет по ипотеке - выбрать банк, первоначальный взнос и процентную ставку</li>
+                            <li class="list_item">Узнать какая скидка по взносу наличными средствами</li>
+                            <li class="list_item">Узнать сколько инвесторы зарабатывают на новых объектах с помощью ипотеки</li>
+                        </ul>
+                        <div class="message">
+                            <span>УСПЕШНО!</span>
+                            <span>Ждите звонка от специалиста</span>
+                            <button data-close class="button button-before button-gold">OK</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -814,10 +834,29 @@
             <div class="popup__wrapper">
                 <div class="popup__content">
                     <div class="popup__block">
-
+                        <h2 class="title title-h2 title-gold">
+                            ПООБЩАЙТЕСЬ<br>
+                            С НАМИ!
+                        </h2>
+                        <p class="subtitle">
+                            Оставьте свой номер телефона
+                            и мы вам перезвоним
+                            просто и не навязчиво,
+                            поговорим о погоде!
+                        </p>
+                        <div class="message">
+                            <span>УСПЕШНО!</span>
+                            <span>Ждите звонка от специалиста</span>
+                            <button data-close class="button button-before button-gold">OK</button>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="button-up">
+            <svg width="32" height="17" viewBox="0 0 32 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.906963 13.9199C0.641034 14.194 0.374999 14.4682 0.374999 15.0164C0.374999 15.2905 0.374999 15.5647 0.640928 15.8388C1.17289 16.3871 1.97067 16.3871 2.50264 15.8388L15.8005 3.50326L29.3643 15.8388C29.8963 16.3871 30.6941 16.3871 31.226 15.8388C31.758 15.2905 31.758 14.4682 31.226 13.9199L16.5984 1.03622C16.0664 0.487926 15.2687 0.487926 14.7367 1.03622L0.906963 13.9199Z" fill="white"/>
+            </svg>
         </div>
     </body>
 </html>

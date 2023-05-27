@@ -62,6 +62,9 @@
         max-width: 100%;
         min-height: 550px;
       }
+      @include xs {
+        min-height: 300px;
+      }
     }
   }
 }

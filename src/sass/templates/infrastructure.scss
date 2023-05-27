@@ -64,6 +64,10 @@
     @include md {
       margin: 34px auto 0;
     }
+    @include xs {
+      flex-direction: column;
+      text-align: center;
+    }
     .pdf {
       display: flex;
       gap: 14px;

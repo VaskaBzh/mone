@@ -3,11 +3,35 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  @include sm {
+    position: fixed;
+    flex-direction: column;
+    left: 0;
+    bottom: -100%;
+    width: 100vw;
+    height: fit-content;
+    background: $white;
+    transition: all 0.6s ease 0s;
+    z-index: 98;
+    box-shadow: $boxShadowMenu;
+    border-radius: 16px;
+    padding: 100px 0;
+    overflow-y: scroll;
+    gap: 30px;
+    &.open {
+      bottom: 0;
+    }
+  }
   &__link {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     color: $darkBlue;
     text-decoration: none;
+    @include sm {
+      color: $black;
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }

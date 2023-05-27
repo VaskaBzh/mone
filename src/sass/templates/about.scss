@@ -8,6 +8,10 @@
     background-size: 50% 55%;
     background-position: 66% -2%;
   }
+  @include sm {
+    background-size: 100%;
+    background-position: center;
+  }
   .wrapper {
     display: flex;
     gap: 70px;
@@ -24,6 +28,13 @@
     width: 100%;
     position: relative;
     min-height: 766px;
+    @include sm {
+      min-height: 0;
+      display: flex;
+      justify-content: space-around;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
   }
   &_img {
     &-main {
@@ -31,6 +42,15 @@
       top: 50%;
       right: 62px;
       transform: translateY(-50%);
+      @include sm {
+        position: relative;
+        top: 0 !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        transform: none;
+        width: 100%;
+      }
     }
   }
   &__block {
@@ -39,6 +59,13 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    @include sm {
+      position: relative;
+      top: 0 !important;
+      bottom: 0 !important;
+      right: 0 !important;
+      left: 0 !important;
+    }
     span {
       position: absolute;
       background: $white;

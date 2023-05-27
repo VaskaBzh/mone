@@ -1,4 +1,7 @@
 .map {
   min-height: 620px;
   margin: 37px 0 50px;
+  @include xs {
+    min-height: 300px;
+  }
 }
